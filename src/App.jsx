@@ -1,0 +1,232 @@
+import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import { Youtube, Linkedin, ChevronDown } from 'lucide-react'
+import './App.css'
+
+// Import only available hero images
+import hero1 from './assets/16903308_423425738005701_5404214275287918541_o(1).jpg'
+import hero2 from './assets/16905076_423422581339350_4787090444456436716_o(1).jpg'
+import hero3 from './assets/20171214_135546.jpg'
+
+// Import available gallery images
+import img1 from './assets/11222913_174523472895930_6750542838353781333_n.jpg'
+import img2 from './assets/1393420_652892058084355_1372495335_n.jpg'
+import img3 from './assets/1558383_754679671238926_19404376960586844_n.jpg'
+import img4 from './assets/10653381_844365338937025_5868747043718652767_n.jpg'
+import img5 from './assets/20180901_122151.jpg'
+import img6 from './assets/20180902_190555.jpg'
+import img7 from './assets/20230125_115516.jpg'
+import img8 from './assets/2015426141331.jpg'
+import img9 from './assets/BUYsL-1KsiD-VVemladaLLsfDRLCCkUskWEFydsnn1U.jpg'
+import img10 from './assets/91Is2ZjA7BuMpvKEEanQHBc20xotbVsugLz-g_Pv4hU.jpg'
+
+const heroImages = [hero1, hero2, hero3]
+
+const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10]
+
+const youtubeVideos = [
+  "EdeIr_0cGzs",
+  "5PJKxAqrP5c",
+  "k4x3JZnpaFQ",
+  "gjBDafwyIP4",
+  "qggN8xsROw8"
+]
+
+const experiences = [
+  {
+    title: "CO-Funder of ST Thomas University New York",
+    organization: "ST Thomas University New York",
+    link: "https://blog.uniecampus.it/2025/01/31/universita-ecampus-acquisisce-americana-st-thomas-university/"
+  },
+  {
+    title: "Education and Smart Cities Specialist: Public Relations",
+    organization: "Self-employed"
+  },
+  {
+    title: "Chair in Smart Cities Council and Member of International Collaboration Team",
+    organization: "Amnick Social Enterprise",
+    link: "https://youtu.be/cDR8BD7I_x8"
+  },
+  {
+    title: "Member of Boards of Directors - Director - SSML Adriano Macagno - Cuneo -Italy",
+    organization: "SSML Adriano Macagno"
+  },
+  {
+    title: "University Professor: International Relations",
+    organization: "University of Central Europe"
+  }
+]
+
+export default function App() {
+  const [currentHeroIndex, setCurrentHeroIndex] = useState(0)
+  const [selectedImage, setSelectedImage] = useState(null)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentHeroIndex((prev) => (prev + 1) % heroImages.length)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [])
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <section className="relative h-screen bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center overflow-hidden">
+        <img 
+          src={heroImages[currentHeroIndex]} 
+          alt="Hero" 
+          className="absolute inset-0 w-full h-full object-cover opacity-40"
+        />
+        <div className="relative z-10 text-center text-white px-4">
+          <motion.h2 
+            className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-2xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+          >
+            Dr. h. c. Mkades Abdul MA, MBA
+          </motion.h2>
+          <motion.p 
+            className="text-xl md:text-3xl mb-2 text-blue-200 drop-shadow-lg"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+          >
+            Executive Director
+          </motion.p>
+          <motion.p 
+            className="text-lg md:text-2xl mb-8 text-purple-200 drop-shadow-lg"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+          >
+            Professor of International Relations | Expert in Smart Cities
+          </motion.p>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section className="py-20 px-4 md:px-8 max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold mb-12 text-center text-gray-800">Professional Experience</h2>
+        <div className="space-y-8">
+          {experiences.map((exp, idx) => (
+            <motion.div
+              key={idx}
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: idx * 0.1 }}
+            >
+              <h3 className="text-2xl font-bold text-blue-600 mb-2">{exp.title}</h3>
+              <p className="text-gray-600 mb-3">{exp.organization}</p>
+              {exp.link && (
+                <a 
+                  href={exp.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:text-blue-700 underline"
+                >
+                  Learn More →
+                </a>
+              )}
+            </motion.div>
+          ))}
+        </div>
+        
+        {/* LinkedIn Link */}
+        <motion.div 
+          className="mt-12 text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+        >
+          <a 
+            href="https://www.linkedin.com/in/abdel-mkades-3731a9196/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            <Linkedin size={20} />
+            Connect on LinkedIn
+          </a>
+        </motion.div>
+      </section>
+
+      {/* Videos Section */}
+      <section className="py-20 px-4 md:px-8 bg-gray-100">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12 text-center text-gray-800">Featured Videos</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {youtubeVideos.map((videoId, idx) => (
+              <motion.div
+                key={idx}
+                className="aspect-video bg-black rounded-lg overflow-hidden"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: idx * 0.1 }}
+              >
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${videoId}`}
+                  title={`Video ${idx + 1}`}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-20 px-4 md:px-8 max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold mb-12 text-center text-gray-800">Photo Gallery</h2>
+        <div className="gallery-grid">
+          {galleryImages.map((img, idx) => (
+            <motion.div
+              key={idx}
+              className="gallery-item cursor-pointer"
+              onClick={() => setSelectedImage(img)}
+              whileHover={{ scale: 1.05 }}
+            >
+              <img src={img} alt={`Gallery ${idx + 1}`} className="w-full h-64 object-cover rounded-lg" />
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <motion.div
+          className="modal"
+          onClick={() => setSelectedImage(null)}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <motion.div
+            className="modal-content"
+            onClick={(e) => e.stopPropagation()}
+            initial={{ scale: 0.9 }}
+            animate={{ scale: 1 }}
+          >
+            <img src={selectedImage} alt="Full view" className="max-w-4xl max-h-screen object-contain" />
+          </motion.div>
+        </motion.div>
+      )}
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white py-8 text-center">
+        <p>&copy; 2025 Dr. h. c. Mkades Abdul MA, MBA. All rights reserved.</p>
+        <div className="flex justify-center gap-4 mt-4">
+          <a href="https://www.linkedin.com/in/abdel-mkades-3731a9196/" target="_blank" rel="noopener noreferrer">
+            <Linkedin size={24} />
+          </a>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+            <Youtube size={24} />
+          </a>
+        </div>
+      </footer>
+    </div>
+  )
+}
