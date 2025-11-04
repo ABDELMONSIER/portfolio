@@ -19,10 +19,26 @@ import img7 from './assets/20230125_115516.jpg'
 import img8 from './assets/2015426141331.jpg'
 import img9 from './assets/BUYsL-1KsiD-VVemladaLLsfDRLCCkUskWEFydsnn1U.jpg'
 import img10 from './assets/91Is2ZjA7BuMpvKEEanQHBc20xotbVsugLz-g_Pv4hU.jpg'
+import img11 from './assets/16903308_423425738005701_5404214275287918541_o(1)(1).jpg'
+import img12 from './assets/FB_IMG_1468432447465.jpg'
+import img13 from './assets/IMG-20160422-WA0001.jpg'
+import img14 from './assets/IMG_20130603_142853.jpg'
+import img15 from './assets/IMG_20130603_142857.jpg'
+import img16 from './assets/IMG_20130607_130219.jpg'
+import img17 from './assets/IMG_20130927_122446.jpg'
+import img18 from './assets/IMG_20130927_123122.jpg'
+import img19 from './assets/temp_hero1.jpg'
+import img20 from './assets/temp_hero2.jpg'
+import img21 from './assets/temp_hero3.jpg'
+import img22 from './assets/temp_hero4.jpg'
+import img23 from './assets/temp_hero5.jpg'
+import img24 from './assets/16903308_423425738005701_5404214275287918541_o(1)(1).jpg'
+import img25 from './assets/16905076_423422581339350_4787090444456436716_o(1).jpg'
+import img26 from './assets/BUYsL-1KsiD-VVemladaLLsfDRLCCkUskWEFydsnn1U.jpg'
 
 const heroImages = [hero1, hero2, hero3]
 
-const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10]
+const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26]
 
 const youtubeVideos = [
   "EdeIr_0cGzs",
@@ -34,7 +50,7 @@ const youtubeVideos = [
 
 const experiences = [
   {
-    title: "CO-Funder of ST Thomas University New York",
+    title: "Co-Founder of ST Thomas University New York",
     organization: "ST Thomas University New York",
     link: "https://blog.uniecampus.it/2025/01/31/universita-ecampus-acquisisce-americana-st-thomas-university/"
   },
@@ -54,6 +70,26 @@ const experiences = [
   {
     title: "University Professor: International Relations",
     organization: "University of Central Europe"
+  },
+  {
+    title: "Executive Director",
+    organization: "EDUWORLD HOLDING Ltd"
+  },
+  {
+    title: "Director Of International Development",
+    organization: "La Scuola Superiore per Mediatori Linguistici \"Adriano Macagno\" di Cuneo"
+  },
+  {
+    title: "Member of the Board of Directors",
+    organization: "Università degli Studi Gabriele d'Annunzio -Leonardo Davinci"
+  },
+  {
+    title: "Member of the Board of Directors",
+    organization: "University Central Europe"
+  },
+  {
+    title: "President of Aspim Europa France and French Speaking Countries",
+    organization: "ASPIM EUROPA"
   }
 ]
 
