@@ -40,7 +40,12 @@ const youtubeVideos = [
   "5PJKxAqrP5c",
   "k4x3JZnpaFQ",
   "gjBDafwyIP4",
-  "qggN8xsROw8"
+  "qggN8xsROw8",
+  "cDR8BD7I_x8",
+  "SpPgrI4Dyys",
+  "66nHIV3FzwA",
+  "G5dshRpmxGA",
+  "ifdNcNZKIIE"
 ]
 
 const experiences = [
