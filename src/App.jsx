@@ -49,13 +49,12 @@ import img37 from './assets/WhatsAppImage2025-09-30at20.16.46.jpeg'
 import img38 from './assets/temp_hero1.jpg'
 import img39 from './assets/temp_hero2.jpg'
 import img40 from './assets/temp_hero3.jpg'
-import img41 from './assets/temp_hero4.jpg'
-import img42 from './assets/temp_hero5.jpg'
+
 
 
 const heroImages = [hero1, hero2, hero3]
 
-const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26, img27, img28, img29, img30, img31, img32, img33, img34, img35, img36, img37, img38, img39, img40, img41, img42]
+const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26, img27, img28, img29, img30, img31, img32, img33, img34, img35, img36, img37, img38, img39, img40]
 
 const youtubeVideos = [
   "EdeIr_0cGzs",
